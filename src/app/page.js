@@ -1,95 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from "react";
+import HeroBanner3 from "../app/Components/HeroBanner/HeroBanner3";
+import Feature4 from "../app/Components/Feature/Feature4";
+import Feature5 from "../app/Components/Feature/Feature5";
+import Feature6 from "../app/Components/Feature/Feature6";
+import HowWork3 from "../app/Components/HowWork/HowWork3";
+import Pricing3 from "../app/Components/Pricing/Pricing3";
+import Counter1 from "../app/Components/Counter/Counter1";
+import About3 from "../app/Components/About/About3";
+import Brand3 from "../app/Components/Brand/Brand3";
+import Testimonial3 from "../app/Components/Testimonial/Testimonial3";
+import Blog1 from "../app/Components/Blog/Blog1";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div>
+      <HeroBanner3
+        bgimg="/assets/images/hero/hero-bg.jpg"
+        subtitle="Transforming School Management"
+        title="Manage, Track, and Streamline <span>School Operations</span>"
+        content="Our School ERP simplifies administration, attendance, and academics, ensuring teachers, students, and parents stay connected efficiently."
+        btnname="Get Started Now"
+        btnurl="/contact"
+        btnname2="Learn More"
+        btnurl2="/about"
+        img1="/assets/images/hero/01.png"
+        img2="/assets/images/hero/mobile.png"
+      ></HeroBanner3>
+      <Feature4
+        img="/assets/images/about/01.png"
+        subtitle="Our Features"
+        title="Empowering Schools with Smart Solutions"
+        content="Our School ERP offers comprehensive tools to manage academics, attendance, exams, and communication, making school administration seamless and efficient."
+        FeatureList={[
+          "<b>User-Friendly Interface :</b> <span> Intuitive design for teachers, students, and parents</span>",
+          "<b>Secure & Reliable :</b> <span> Protects sensitive student and staff data</span>",
+          "<b>24/7 Support :</b> <span> Assistance anytime for smooth operations</span>",
+          "<b>Scalable for Schools :</b> <span> Adapts to institutions of all sizes</span>",
+        ]}
+        btnname="Learn More"
+        btnurl="/about"
+      ></Feature4>
+      <Feature5></Feature5>
+      <Feature6></Feature6>
+      <HowWork3></HowWork3>
+      <Pricing3></Pricing3>
+      <Counter1></Counter1>
+      <About3
+        img1="/assets/images/what-do.png"
+        subtitle="What We Do"
+        title="We provide a complete School ERP solution."
+        content="Our platform helps schools manage academics, attendance, exams, fees, and communication seamlessly, empowering teachers, students, and parents."
+        boxtitle1="Comprehensive School Management"
+        boxcontent1="Manage students, teachers, classes, timetables, and attendance efficiently in a single platform."
+        boxtitle2="Advanced Academic & Administrative Tools"
+        boxcontent2="Streamline exams, grades, fees, library, transport, and communication with intuitive, easy-to-use tools."
+      ></About3>
+      <Brand3></Brand3>
+      <Testimonial3></Testimonial3>
+      <Blog1></Blog1>
     </div>
   );
-}
+};
+
+export default page;
